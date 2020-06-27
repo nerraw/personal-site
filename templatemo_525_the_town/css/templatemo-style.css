@@ -224,6 +224,24 @@ a:focus {
   margin-bottom: 1px;
 }
 
+.form-control {
+  color: #fff;
+  background-color: #0e0e1be0;
+  border-color: var(--color1);
+}
+
+.form-control::placeholder{
+  color:#bbbbbb
+}
+
+.form-control:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 0.1rem #fff8;
+  background-color: #0e0e1be0;
+}
+
+
 .tm-hero-title {
   font-size: 4.5rem;
   text-shadow: 2px 2px 2px #333;
@@ -373,7 +391,7 @@ a:focus {
 }
 
 .modal .carousel-inner {
-  min-height: 60vh;
+  min-height: 75vh;
 }
 
 .carousel-indicators li {
@@ -570,6 +588,11 @@ figure.effect-honey:hover h2 i {
   transition: all 0.3s ease;
 }
 
+
+.contact-submit-btn {
+
+}
+
 .tm-contact-item-link:hover i,
 .tm-contact-item-link:hover span {
   color: #3496d8;
@@ -668,7 +691,7 @@ p {
     margin-bottom: auto;
     width: 70%;
     min-width: 300px;
-    background: #0e0e3b40;
+    background: #0e0e3b70;
     margin-left: auto;
     margin-right: auto;
     max-width: 1063px;
