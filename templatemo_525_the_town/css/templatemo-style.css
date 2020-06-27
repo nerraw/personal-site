@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  --color0: #9494ad;
+  --color0: #97a4be;
   --color1: #0e0e3b;
 }
 
@@ -229,9 +229,14 @@ a:focus {
   text-shadow: 2px 2px 2px #333;
 }
 
+.subtitle-container {
+  height: 5rem;
+}
 .tm-hero-subtitle {
   font-size: 2rem;
   text-shadow: 2px 2px 2px #333;
+  display: none;
+  margin-bottom: 0 !important;
 }
 
 .tm-down-arrow-link {
@@ -333,9 +338,8 @@ a:focus {
   margin: 0 13px;
 }
 
-.slick-arrow {
-  color: black;
-  opacity: .25;
+.slick-prev:before, .slick-next:before {
+  color: var(--color1);
 }
 
 .slick-dots li button:hover:before,
@@ -622,6 +626,8 @@ p {
 }
 
 @media (min-width: 768px) {
+
+ 
   
   .carousel-control-next {
     right: -10vw;
@@ -737,6 +743,12 @@ p {
 }
 
 @media (max-width: 767px) {
+  .skills-column {
+    margin-bottom: 10px;
+    width: 100%;
+    padding-right: 10px;
+    
+  }
   .carousel-control-next {
     right: -11.5vw;
   }
@@ -814,6 +826,9 @@ p {
 }
 
 @media (max-width: 575px) {
+  .carousel-indicators {
+    display: none;
+  }
   .modal-projects {
     margin:auto;
     margin-top: 3vh;
