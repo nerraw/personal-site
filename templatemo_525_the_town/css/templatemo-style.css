@@ -16,10 +16,11 @@ html {
 }
 
 body {
-  color: #8f8f8f;
+  color: #616161;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
 }
 a {
   transition: all 0.3s ease;
@@ -224,11 +225,12 @@ a:focus {
 }
 
 .tm-hero-title {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-shadow: 2px 2px 2px #333;
 }
 
 .tm-hero-subtitle {
+  font-size: 2rem;
   text-shadow: 2px 2px 2px #333;
 }
 
@@ -277,7 +279,7 @@ a:focus {
 }
 
 .tm-intro-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.4;
 }
 
@@ -288,6 +290,11 @@ a:focus {
 }
 
 /* Work */
+.gallery-img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
 
 .tm-work-description {
   max-width: 650px;
@@ -302,6 +309,20 @@ a:focus {
 
 .tm-gallery-item {
   margin: 0 15px;
+  object-fit: cover;
+  object-position: center;
+
+  max-width: 100%;
+
+}
+.slick-img{
+ overflow: hidden;
+ object-fit: cover;
+ object-position: center;
+}
+
+.slick-img:focus{
+  outline: none;
 }
 
 .slick-dots {
@@ -310,6 +331,11 @@ a:focus {
 
 .slick-dots li {
   margin: 0 13px;
+}
+
+.slick-arrow {
+  color: black;
+  opacity: .25;
 }
 
 .slick-dots li button:hover:before,
@@ -323,26 +349,59 @@ a:focus {
   font-size: 26px;
 }
 
+
+.modal h2 {
+  color: var(--color1)
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.modal .carousel-img{
+  width: 29vw;
+  height: 100%;
+  margin:auto;
+}
+.modal-text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.modal .carousel-inner {
+  min-height: 60vh;
+}
+
+.carousel-indicators li {
+  background-color: var(--color0);
+}
+
+.carousel-indicators .active {
+  background-color: var(--color1);
+}
+
 /* Hover Effect */
 /* Common style */
 .grid figure {
   position: relative;
-  float: left;
+  /*float: left;*/
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 320px;
-	max-width: 480px;
+  /*min-width: 320px;*/
+	/*max-width: 480px;*/
 	max-height: 360px;
-	width: 48%;
-  background: #3085a3;
+	/*width: 48%;*/
+  background: #1c142c;
   text-align: center;
   cursor: pointer;
+  object-fit: cover;
+  object-position: center;
 }
 
 .grid figure img {
   position: relative;
   display: block;
-  min-height: 100%;
+  /*min-height: 100%;*/
   max-width: 100%;
   opacity: 0.8;
 }
@@ -407,10 +466,7 @@ a:focus {
 /***** Honey *****/
 /*---------------*/
 
-figure.effect-honey {
-  background: #4a3753;
-  max-width: 95%;
-}
+
 
 figure.effect-honey img {
   opacity: 0.9;
@@ -438,11 +494,12 @@ figure.effect-honey h2 {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1em 1.5em;
+  padding: 1.5em 1em;
   width: 100%;
   text-align: left;
   -webkit-transform: translate3d(0, -30px, 0);
   transform: translate3d(0, -30px, 0);
+  font-size: 1.25rem;
 }
 
 figure.effect-honey h2 i {
@@ -565,6 +622,14 @@ p {
 }
 
 @media (min-width: 768px) {
+  
+  .carousel-control-next {
+    right: -10vw;
+  }
+  
+  .carousel-control-prev {
+    left: -10vw;
+  }
   .tm-intro-text-container {
     padding-left: 65px;
   }
@@ -612,17 +677,20 @@ p {
 }
 
 @media (min-width: 992px) {
+  .modal-text {
+    margin-left: 5px;
+  }
   .list-column {
     margin-left: auto;
     margin-right: auto;
   }
   .img-offset-left {
     margin-left: 5%;
-    margin-top: 15%;
+    margin-top:15%;
   }
   .img-offset-right {
     margin-right: 0%;
-    margin-top: 15%;
+    margin-top:15%;
   }
   .about-narrow {
     display: none;
@@ -661,10 +729,21 @@ p {
     margin-top: 20px;
   }
 
+  .carousel-img {
+    margin-top: .5rem;
+    min-width: 100%;
+  }
 
 }
 
 @media (max-width: 767px) {
+  .carousel-control-next {
+    right: -11.5vw;
+  }
+  
+  .carousel-control-prev {
+    left: -11.5vw;
+  }
   .tm-btn-submit {
     margin-left: 20px;
     margin-top: 0;
@@ -722,5 +801,32 @@ p {
     display: block;
     margin-left: 0;
     margin-top: 20px;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .modal-projects {
+    width: 72vw;
+    max-width: 72vw;
+  }
+  
+}
+
+@media (max-width: 575px) {
+  .modal-projects {
+    margin:auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 72vw;
+    max-width: 72vw;
+  }
+  
+  .carousel-control-next {
+    right: -13vw;
+  }
+  
+  .carousel-control-prev {
+    left: -13vw;
   }
 }
