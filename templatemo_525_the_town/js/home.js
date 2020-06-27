@@ -88,6 +88,19 @@ function getOffSet(){
       })(); 
   
   $(function(){
+
+    // Load email submit modal
+    if(window.location.hash) {
+        var hash = window.location.hash;
+        if (hash==="#submitSuccess" || hash==="#submitFailure"){
+            $(hash).modal('toggle');
+        }
+    }
+
+
+
+
+
     // Hero Section - Background Parallax
     background_image_parallax($(".tm-parallax"), 0.30, false);
     //background_image_parallax_2($("#contact"), 0.80);   

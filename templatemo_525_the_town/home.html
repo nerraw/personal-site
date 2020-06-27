@@ -25,7 +25,7 @@
       <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
         <div class="container">   
           <div class="tm-next">
-              <a href="#index" class="navbar-brand"><img src="img/initials.png" class="mr-1 brand-logo"> Warren Brodsky</a>
+              <a href="#index" class="navbar-brand"><img src="img/initials.png" class="mr-1 brand-logo">Warren Brodsky</a>
           </div>             
             
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,6 +138,35 @@
         </div>      
       </div>
 
+      <div class="modal fade modal-submit" id="submitSuccess" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content ">
+            <div class="modal-header submit-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body submit-body text-center">
+              Your message was sent.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade modal-submit" id="submitFailure" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              Uh-oh, something went wrong. Sorry about that.
+            </div>
+          </div>
+        </div>
+      </div>
+
      
     </section>
 
@@ -177,7 +206,7 @@
             
           </div>
           <div class="col-lg-12 tm-intro-text-container">
-            <p class="mt-4 mb-4 tm-intro-text">I graduated from the Rutgers University School of Engineering Honors Program in 2016 with a double major in biomedical engineering and computer engineering. My coursework included: 
+            <p class="mt-4 mb-4 tm-intro-text">In 2016, I graduated from the Rutgers University School of Engineering Honors Program with a double major in biomedical engineering and computer engineering. My coursework included: 
               <div class="row">
                 <ul class="list-column mb-0">
                   <li>Bioelectric Systems</li>
@@ -222,7 +251,7 @@
             <div class="col-12">
                 <div class="mx-auto tm-gallery-container">
                     <div class="grid tm-gallery">
-                      <div class="slick-img"  data-toggle="modal" data-target="#exampleModal">
+                      <div class="slick-img"  data-toggle="modal" data-target="#projectsModal">
                         <a href="#carouselExample" data-target="#carouselExample" data-slide-to="0">
                           <figure class="effect-honey tm-gallery-item">
                             <img src="img/CyberKnight.PNG" alt="Image" class="img-fluid gallery-img">
@@ -232,7 +261,7 @@
                           </figure>
                       </a>
                       </div>
-                      <div class="slick-img" data-toggle="modal" data-target="#exampleModal">
+                      <div class="slick-img" data-toggle="modal" data-target="#projectsModal">
                         <a href="#carouselExample" data-target="#carouselExample" data-slide-to="1">
                           <figure class="effect-honey tm-gallery-item">
                             <img src="img/90Percent.PNG" alt="Image" class="img-fluid gallery-img">
@@ -242,7 +271,7 @@
                           </figure>
                       </a>
                       </div>
-                      <div class="slick-img" data-toggle="modal" data-target="#exampleModal">
+                      <div class="slick-img" data-toggle="modal" data-target="#projectsModal">
                         <a href="#carouselExample" data-target="#carouselExample" data-slide-to="2">
                           <figure class="effect-honey tm-gallery-item">
                             <img src="img/Eye-calibrator.png" alt="Image" class="img-fluid gallery-img">
@@ -252,7 +281,7 @@
                           </figure>
                       </a>
                       </div>
-                      <div class="slick-img" data-toggle="modal" data-target="#exampleModal">
+                      <div class="slick-img" data-toggle="modal" data-target="#projectsModal">
                         <a href="#carouselExample" data-target="#carouselExample" data-slide-to="3">
                           <figure class="effect-honey tm-gallery-item">
                             <img src="img/DragonCurve.png" alt="Image" class="img-fluid gallery-img">
@@ -262,7 +291,7 @@
                           </figure>
                         </a>
                       </div>
-                      <div class="slick-img" data-toggle="modal" data-target="#exampleModal">
+                      <div class="slick-img" data-toggle="modal" data-target="#projectsModal">
                         <a href="#carouselExample" data-target="#carouselExample" data-slide-to="4">
                           <figure class="effect-honey tm-gallery-item">
                             <img src="img/CovidSIR.png" alt="Image" class="img-fluid gallery-img">
@@ -277,7 +306,7 @@
                     <!-- 
                     This part is straight out of Bootstrap docs. Just a carousel inside a modal.
                     -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-hidden="true">
                       <div class="modal-dialog modal-projects" role="document">
                         <div class="modal-content ">
                           <div class="modal-header">
@@ -309,8 +338,8 @@
                                   <div class="row ">
                                     <div class="col-lg-6">
                                       <h2>90Percent</h2>
-                                      <p class="modal-text">90Percent is a game designed to test your ability to evaluate the accuracy of your knowledge. The game asks you several numerical questions and asks you to give a range of answers such that you are 90% confident that the true answer is within the range. This means, on average, approximately 9/10 questions should have their answer within the range you provided. The closer you are to 90%, the better you're doing.</p>
-                                      <p class="modal-text"><a href="90percent.html">Try it out!</a></p>
+                                      <p class="modal-text">90Percent is a game designed to test your ability to evaluate the accuracy of your knowledge. The game asks you several numerical questions and asks you to give a range of answers such that you are 90% confident that the true answer is within the range. This means, on average, approximately 9/10 questions should have their answers within the range you provided. The closer you are to 90%, the better you're doing.</p>
+                                      <p class="modal-text"><a href="90percent.html">Click here to try it out!</a></p>
                                     </div>
                                     <img class="col-lg-6 carousel-img" src="img/90Percent.PNG" alt="90Percent">
                                   </div>

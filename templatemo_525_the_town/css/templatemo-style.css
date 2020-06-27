@@ -376,6 +376,22 @@ a:focus {
   color: var(--color1)
 }
 
+.modal-submit {
+  width: 25vw;
+  margin-top: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+
+}
+
+
+
+.submit-body {
+  height: 9vh;
+  color: #555;
+}
+
 .modal-content {
   height: 100%;
 }
